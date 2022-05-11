@@ -78,7 +78,7 @@ export class UserRepository {
             throw new HttpException({
                 status: BAD_REQUEST,
                 message: 'Ha ocurrido un error inesperado'
-            }, HttpStatus.INTERNAL_SERVER_ERROR);
+            }, HttpStatus.BAD_REQUEST);
         }
     }
 
@@ -90,9 +90,9 @@ export class UserRepository {
         } catch (error) {
             console.error(error);
             throw new HttpException({
-                status: INTERNAL_SERVER_ERROR,
+                status: BAD_REQUEST,
                 response: { count: 0, response: null }
-            }, HttpStatus.INTERNAL_SERVER_ERROR);
+            }, HttpStatus.BAD_REQUEST);
         }
     }
 }

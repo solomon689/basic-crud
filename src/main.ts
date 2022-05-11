@@ -7,7 +7,8 @@ async function bootstrap() {
   app.setGlobalPrefix('api')
   const config = new DocumentBuilder()
     .setTitle('CRUD básico')
-    .setDescription(`Api creada a modo de práctica con métodos CRUD básicos para un funcionamiento común dentro de estas tecnologías.`)
+    .setDescription(`API con métodos CRUD básicos y autenticación con jsonwebtoken creada con el 
+      framework de nestJS y documentación generada a partir de la API swagger a modo de práctica.`)
     .setVersion('1.0')
     .build()
   const document = SwaggerModule.createDocument(app, config);

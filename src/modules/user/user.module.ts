@@ -28,5 +28,9 @@ export class UserModule implements NestModule{
     consumer
       .apply(VerifyUserIdMiddleware)
       .forRoutes({ path: 'user/:id', method: RequestMethod.PATCH });
+    
+    consumer
+      .apply(VerifyUserIdMiddleware)
+      .forRoutes({ path: 'user/:id', method: RequestMethod.DELETE });
   }
 }
